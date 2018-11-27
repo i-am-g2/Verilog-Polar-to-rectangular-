@@ -1,0 +1,9 @@
+Status Report
+
+Multiplier - Fixed point multiplier has been implemented.
+         Floating point multiplier implementation is under progress and expected to be completed soon.
+Look up table - Designed and coded. Yet to be included in the project.
+Cover module to control the inputs and outputs to the multiplier and look up table modules - Yet to be done.
+Output module to convert the output to be displayed in 7 segment display
+Source : https://github.com/suoglu/Fixed-Floating-Point-Adder-Multiplier
+	But that was incorrect, after that we had to re-write the entire code from scratch taking slight help from the source.

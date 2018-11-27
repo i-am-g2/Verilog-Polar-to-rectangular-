@@ -1,0 +1,73 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Nov 27 14:41:01 2018
+| Host         : lab running 64-bit Ubuntu 16.04.4 LTS
+| Command      : report_control_sets -verbose -file topmodule_control_sets_placed.rpt
+| Design       : topmodule
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            2 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            1 |
+| No           | No                    | Yes                    |              72 |           11 |
+| No           | Yes                   | No                     |              56 |            7 |
+| Yes          | No                    | No                     |              88 |           23 |
+| Yes          | No                    | Yes                    |              64 |           12 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+-----------------------+------------------+------------------+----------------+
+|       Clock Signal      |     Enable Signal     | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------------+-----------------------+------------------+------------------+----------------+
+|  ssdController/stateClk |                       | rst_IBUF         |                1 |              4 |
+|  clk_IBUF_BUFG          |                       |                  |                1 |              4 |
+|  clk_IBUF_BUFG          | num1[15]_i_1_n_0      | rst_IBUF         |                5 |             32 |
+|  clk_IBUF_BUFG          | num2[15]_i_1_n_0      | rst_IBUF         |                7 |             32 |
+|  clk_IBUF_BUFG          | lutY/outReg_reg[10]_0 |                  |               13 |             44 |
+|  clk_IBUF_BUFG          | lutX/outReg_reg[10]_0 |                  |               10 |             44 |
+|  ssd_3/E[0]             |                       | ssd_3/AS[0]      |                7 |             56 |
+|  clk_IBUF_BUFG          |                       | rst_IBUF         |               10 |             68 |
++-------------------------+-----------------------+------------------+------------------+----------------+
+
+
